@@ -1,0 +1,31 @@
+[
+    {
+        "type": 1,
+        "title": "Homarr",
+        "name": "homarr",
+        "description": "Simplify the management of your server with Homarr - a sleek, modern dashboard that puts all of your apps and services at your fingertips. With Homarr, you can access and control everything in one convenient location.",
+        "logo": "https://homarr.dev/img/logo.png",
+        "image": "ghcr.io/ajnart/homarr:latest",
+        "note": "This is a note",
+        "categories": [
+          "Other",
+          "Tools"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+          "8013:7575/tcp"
+        ],
+        "network_mode": "bridge",
+        "volumes": [
+          {
+            "container": "/app/data/configs",
+            "bind": "/var/www/homarr/configs"
+          },
+          {
+            "container": "/etc/localtime",
+            "bind": "/var/www/homarr/icons"
+          }
+        ]
+      }
+]
