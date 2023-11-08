@@ -55,6 +55,12 @@
             "container": "/mnt/host:ro",
             "bind": "/var/www/dashdot"
           }
+        ],
+        "env": [
+          {
+            "name": "TZ",
+            "label": "TZ"
+          }
         ]
       }
 ]
