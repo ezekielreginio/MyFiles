@@ -27,5 +27,30 @@
             "bind": "/var/www/homarr/icons"
           }
         ]
+      },
+      {
+        "type": 1,
+        "title": "Dash.",
+        "name": "dash",
+        "description": "dash. (or dashdot) is a modern server dashboard, running on the latest tech, designed with glassmorphism in mind. It is intended to be used for smaller VPS and private servers.",
+        "logo": "https://getdashdot.com/img/logo512.png",
+        "image": "mauricenino/dashdot:latest",
+        "note": "This is a note",
+        "categories": [
+          "Other",
+          "Tools"
+        ],
+        "platform": "linux",
+        "restart_policy": "unless-stopped",
+        "ports": [
+          "8014:3001/tcp"
+        ],
+        "network_mode": "bridge",
+        "volumes": [
+          {
+            "container": "/app/data/configs",
+            "bind": "/mnt/host:ro"
+          }
+        ]
       }
 ]
