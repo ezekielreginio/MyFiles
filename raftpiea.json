@@ -48,8 +48,8 @@
         "network_mode": "bridge",
         "volumes": [
           {
-            "container": "/app/data/configs",
-            "bind": "/mnt/host:ro"
+            "container": "/mnt/host:ro",
+            "bind": "/var/www/dashdot"
           }
         ]
       }
